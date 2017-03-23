@@ -1,0 +1,483 @@
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+// Import Bootstrap
+@import "bootstrap";
+// or Import Bootstrap Flex
+// @import "bootstrap-flex";
+// or Import Bootstrap Grid
+// @import "bootstrap-grid";
+// or Import Bootstrap Reboot
+// @import "bootstrap-reboot";
+@import "wordpress";
+@import "header";
+@import "page";
+@import "post";
+@import "blog";
+@import "hero";
+@import "custom-post";
+@import "custom-archive";
+@import "../www/lib/font-awesome/scss/font-awesome";
+@import "../www/lib/slick-carousel/slick/slick-theme";
+body {}
+
+html {
+  font-size: 16px;
+}
+
+@include media-breakpoint-up(xs) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+/* Customize container */
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 60rem;
+  }
+}
+
+
+/*! Header Image Background */
+
+.business-header {
+  height: 520px;
+  background: url('../i/hero.jpg') center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  /* Customize business header */
+  @media (max-width: 62rem) {
+    .business-header {
+      height: 400px;
+    }
+  }
+}
+
+.featured {
+  bottom: -14rem;
+  /* Customize featured */
+  @media (max-width: 62em) {
+    .featured {
+      bottom: -4rem;
+    }
+  }
+}
+
+/*! Footer */
+
+#wrapper-footer {
+  @extend .py-5;
+  @extend .left-to-right;
+  background: lighten($black, 95%);
+  a {
+    color: $gray-light;
+    :hover, 
+    &:focus {
+      color: $gray-dark;
+    }
+    &:visited {
+      color: $gray;
+    }
+  }
+  p {
+    color: $gray-lighter;
+  }
+}
+
+.colophon {
+  @extend .row;
+}
+
+#footer-logo {
+  @extend .col-sm-2;
+  @extend .col-md-1;
+}
+
+/*! Globals */
+.wrapper {
+  @extend .container;
+}
+
+.wrapper-lg {
+  @extend .container-fluid;
+}
+
+.buttonL {
+  width: 14rem;
+  margin: 0 auto;
+  a {
+    color: $gray-dark;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $headings-font-family;
+    font-weight: 700;
+    display: block;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @extend .p-3;
+    &:visited {
+      color: $gray-dark;
+    }
+    &:hover {
+      color: $gray-dark;
+      margin: 4px 0 0 4px;      
+    }
+    &:focus {
+      color: $gray-dark;
+      margin: 4px 0 0 4px;      
+    }
+  }
+  &.white {
+    a {
+      border: 1px solid $black;
+      background: $white;
+
+      -moz-box-shadow:    4px 4px 0px 0px darken($black, 15%);
+      -webkit-box-shadow: 4px 4px 0px 0px darken($black, 15%);
+      box-shadow:         4px 4px 0px 0px darken($black, 15%);
+
+      -webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -moz-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -o-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -ms-transition: all 0.1s linear;
+      transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      &:visited {
+        -moz-box-shadow:    4px 4px 0px 0px darken($black, 30%);
+        -webkit-box-shadow: 4px 4px 0px 0px darken($black, 30%);
+        box-shadow:         4px 4px 0px 0px darken($black, 30%);
+
+      }
+      &:hover {
+        -moz-box-shadow:    0px 0px 0px 0px darken($black, 30%);
+        -webkit-box-shadow: 0px 0px 0px 0px darken($black, 30%);
+        box-shadow:         0px 0px 0px 0px darken($black, 30%);  
+      }
+    }
+  }
+  &.green {
+    a {
+      background: $green;
+
+      -moz-box-shadow:    4px 4px 0px 0px darken($green, 15%);
+      -webkit-box-shadow: 4px 4px 0px 0px darken($green, 15%);
+      box-shadow:         4px 4px 0px 0px darken($green, 15%);
+
+      -webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -moz-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -o-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -ms-transition: all 0.1s linear;
+      transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      &:visited {
+        -moz-box-shadow:    4px 4px 0px 0px darken($green, 30%);
+        -webkit-box-shadow: 4px 4px 0px 0px darken($green, 30%);
+        box-shadow:         4px 4px 0px 0px darken($green, 30%);
+
+      }
+      &:hover {
+        -moz-box-shadow:    0px 0px 0px 0px darken($green, 30%);
+        -webkit-box-shadow: 0px 0px 0px 0px darken($green, 30%);
+        box-shadow:         0px 0px 0px 0px darken($green, 30%);  
+      }
+    }
+  }
+  &.red {
+    a {
+      background: $yellow;
+
+      -moz-box-shadow:    4px 4px 0px 0px $red;
+      -webkit-box-shadow: 4px 4px 0px 0px $red;
+      box-shadow:         4px 4px 0px 0px $red;
+
+      -webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -moz-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -o-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      -ms-transition: all 0.1s linear;
+      transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+      &:visited {
+        -moz-box-shadow:    4px 4px 0px 0px darken($red, 30%);
+        -webkit-box-shadow: 4px 4px 0px 0px darken($red, 30%);
+        box-shadow:         4px 4px 0px 0px darken($red, 30%);
+      }
+      &:hover {
+        -moz-box-shadow:    0px 0px 0px 0px darken($red, 30%);
+        -webkit-box-shadow: 0px 0px 0px 0px darken($red, 30%);
+        box-shadow:         0px 0px 0px 0px darken($red, 30%);  
+      }
+    }
+  }
+}
+
+@media (max-width: 62rem) {
+  .buttonL {
+    width: 10rem;
+  }
+}
+
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+  &.red {
+    background: -webkit-linear-gradient(left, $yellow, $red);
+    background: -o-linear-gradient(left, $yellow, $red);
+    background: linear-gradient(to right, $yellow, $red);
+    -webkit-background-clip: text;
+  }
+  &.blue {
+    background: -webkit-linear-gradient(right, $blue, $green);
+    background: -o-linear-gradient(right, $blue, $green);
+    background: linear-gradient(to left, $blue, $green);
+    -webkit-background-clip: text;
+  }
+}
+
+.anaglyph {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  color: rgb(51, 51, 51);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 3px;
+  text-shadow: -3px 0 1px $gray-dark, 3px 0 1px $gray-light;
+  text-transform: uppercase;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  &.page {
+    height: 43.75rem;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: linear-gradient(165deg, $green, #fff 50%);
+  }
+  &.single {
+    height: 43.75rem;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: linear-gradient(165deg, $blue, #fff 50%);
+  }
+}
+
+.linearBg1 {
+  /* fallback */
+  background-color: $blue;
+  background-image: url(images/linear_bg_1.png);
+  background-repeat: repeat-y;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from($blue), to($green));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, $blue, $green);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, $blue, $green);
+  /* IE 10 */
+  background: -ms-linear-gradient(left, $blue, $green);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, $blue, $green);
+}
+
+.linearBg3 {
+  /* fallback */
+  background-color: $yellow;
+  background-image: url(images/linear_bg_1.png);
+  background-repeat: repeat-y;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from($yellow), to($red));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, $yellow, $red);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, $yellow, $red);
+  /* IE 10 */
+  background: -ms-linear-gradient(left, $yellow, $red);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, $yellow, $red);
+}
+
+.linearBg4 {
+  /* fallback */
+  background-color: $black;
+  background-image: url(images/linear_bg_1.png);
+  background-repeat: repeat-y;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from($black), to($red));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, $black, $red);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, $black, $red);
+  /* IE 10 */
+  background: -ms-linear-gradient(left, $black, $red);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, $black, $red);
+}
+
+.linearBg2 {
+  background: 
+    -owg-linear-gradient(135deg, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), 
+    -owg-linear-gradient(45deg, rgba(25, 118, 210, 0) 0, rgba(25, 118, 210, 0) 50%, rgba(25, 118, 210, .4) 100%), 
+    -owg-linear-gradient(transparent 5%, rgba(33, 150, 243, .8) 100%);
+  background: 
+    -webkit-linear-gradient(135deg, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), 
+    -webkit-linear-gradient(45deg, rgba(25, 118, 210, 0) 0, rgba(25, 118, 210, 0) 50%, rgba(25, 118, 210, .8) 100%), 
+    -webkit-linear-gradient(transparent 5%, rgba(33, 150, 243, .8) 100%);
+  background: 
+    -moz-linear-gradient(135deg, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), 
+    -moz-linear-gradient(45deg, rgba(25, 118, 210, 0) 0, rgba(25, 118, 210, 0) 50%, rgba(25, 118, 210, .8) 100%), 
+    -moz-linear-gradient(transparent 5%, rgba(33, 150, 243, .8) 100%);
+  background: 
+    -o-linear-gradient(135deg, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), 
+    -o-linear-gradient(45deg, rgba(25, 118, 210, 0) 0, rgba(25, 118, 210, 0) 50%, rgba(25, 118, 210, .8) 100%), 
+    -o-linear-gradient(transparent 5%, rgba(33, 150, 243, .8) 100%);
+  background: 
+    linear-gradient(135deg, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), 
+    linear-gradient(45deg, rgba(25, 118, 210, 0) 0, rgba(25, 118, 210, 0) 50%, rgba(25, 118, 210, .8) 100%), 
+    linear-gradient(transparent 5%, rgba(33, 150, 243, .8) 100%);
+}
+
+.left-to-right {
+  border-top: .25rem;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+
+  -moz-border-image: -moz-linear-gradient(left, $yellow 0%, $red 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, $yellow 0%, $red 100%);
+  border-image: linear-gradient(to right, $yellow 0%, $red 100%);
+
+  border-image-slice:  1;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: $headings-font-weight;
+  font-family: $headings-font-family;
+  letter-spacing: 2px;
+}
+
+a {
+  -webkit-transition: color, .2s, ease-out;
+  -moz-transition: color, .2s, ease-out;
+  -o-transition: color, .2s, ease-out;
+  transition: color .2s ease-out;
+}
+
+.entry-title {
+  a {
+    color: $gray-dark;
+    :hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.featured-heading {
+  @extend .text-center;
+  @extend .mb-5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.post-thumbnail {
+  img {
+    @extend .img-fluid;
+  }
+}
+
+body:not(.search-results, .blog) article:not(.type-page) {
+  .post-thumbnail {
+    @extend .mb-4;
+  }
+}
+
+/* Slick Carousel */
+
+.slick-current {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+
+/*! Featured Athlete */
+
+.box {
+  width: 650px;
+  height: 420px;
+  position: absolute;
+  z-index: 1;
+  .inner-box {
+    width: 380px;
+    height: 280px;
+    position: absolute;
+    top: 100px;
+    right: -190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+}
+
+/* Customize Featured athlete */
+@media (max-width: 62rem) {
+  .box {
+    width: 360px;
+    height: 240px;
+    .inner-box {
+      width: 240px;
+      height: 180px;
+      top: 60px;
+      right: -160px;
+    }
+  }
+}
+
+/*! Featured Games */
+
+.game-wrapper {
+  height: 420px;
+}
+
+.game-title {
+  width: 93%;
+  height: 90%;
+  margin: 0;
+  background: #fff;
+}
+
+.more-games {
+  position: absolute;
+  bottom: -15px;
+  right: 30%;
+}
+
+@media (max-width: 62rem) {
+  .game-wrapper {
+    height: 240px;
+  }
+  .more-games {
+    right: 15%;
+  }
+}

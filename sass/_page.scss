@@ -1,0 +1,24 @@
+@media (min-width: 62rem) {
+   .page-feature {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    max-width: 60%;
+  }
+  
+  .page-copy {
+    max-width: 80%;
+  }
+}
+
+.page-feature {
+  @extend .mb-3;
+  margin-top: -4rem;
+}
+
+body.page {
+  .entry-content {
+    @extend .container;
+    //@extend .my-5;
+  }
+}

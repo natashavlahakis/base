@@ -1,0 +1,113 @@
+.wp-caption {
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+
+.wp-caption-text {
+  @extend .figure-caption;
+  max-width: 96%; /* Image does not overflow the content area */
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: $gray-lightest;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: $brand-primary;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 0.375rem;
+  line-height: normal;
+  padding: 1rem 1.5rem 0.875rem;
+  text-decoration: none;
+  top: 0.375rem;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+.gallery-caption {
+  color: $gray-light;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.5;
+  padding-top: 0.25rem;
+}
+
+.bypostauthor {
+  font-size: 1rem;
+}
+
+.alignleft {
+  @extend .float-left;
+  margin-right: 1rem;
+}
+
+.alignright {
+  @extend .float-right;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 1rem auto;
+}
+
+#infinite-handle {
+  width: 14rem;
+  margin: 0 auto;
+  span {
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border: 1px solid $black;
+    white-space: nowrap;
+    background: $white;
+    @extend .p-3;
+
+    -moz-box-shadow:    4px 4px 0px 0px darken($black, 30%);
+    -webkit-box-shadow: 4px 4px 0px 0px darken($black, 30%);
+    box-shadow:         4px 4px 0px 0px darken($black, 30%);
+
+    -webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+    -moz-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+    -o-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+    -ms-transition: all 0.1s linear;
+    transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+    &:hover, &:focus {
+      margin: 4px 0 0 4px;
+
+      -moz-box-shadow:    0px 0px 0px 0px darken($black, 30%);
+      -webkit-box-shadow: 0px 0px 0px 0px darken($black, 30%);
+      box-shadow:         0px 0px 0px 0px darken($black, 30%);
+    }
+    button {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $gray-dark;
+      font-family: $headings-font-family;
+      font-weight: 700;
+      &:hover {
+        text-transform: uppercase;
+        Color: $gray-dark;
+        font-family: $headings-font-family;
+        font-weight: 700;
+      }
+    }
+  }
+}

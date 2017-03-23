@@ -1,0 +1,61 @@
+/*! Navigation */
+
+#masthead {
+  @extend .container-fluid;
+  //@extend .clearfix;
+  @extend .py-3;
+  background: $black;
+  #header-logo {
+    @extend .img-fluid;
+    position: absolute;
+    top: -3.5rem;
+    z-index: 1;
+  }
+  .brand {
+    font-size: $font-size-h4;
+    margin-left: 6rem;
+    @extend .hidden-md-down;
+  }
+  #main-menu {
+    margin-left: 6rem;
+    font-family: $headings-font-family;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    .right-nav {
+      @extend .nav;
+      @extend .nav-pills;
+      @extend .float-lg-right;
+    }
+  }
+  a {
+    color: $white;
+    :hover, 
+    &:focus {}
+  }
+}
+
+#top-bar {
+  #social-menu {
+    @extend .offset-md-6;
+    @extend .col-md-6;
+    .nav-link {
+      padding: 0.2em 1em; 
+    }
+    /* styling for menu icons */
+    ul li {
+      //width: 100%;
+    }
+    .fa::before {
+      float: left;
+      margin-top: 0.5rem;
+      width: 1rem;
+    }
+    a {
+      color: $white;
+      :hover,
+      &:focus {
+        color: transparentize($white, .5);
+      }
+    }
+  }
+}

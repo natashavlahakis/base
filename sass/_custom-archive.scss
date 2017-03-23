@@ -1,0 +1,98 @@
+.upcoming-games, .past-games {
+  @extend .mb-5;
+}
+
+.game-details {
+  @extend .list-inline;
+  li {
+    @extend .list-inline-item;
+    @extend .align-top;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    &:nth-child(1) {
+      width: 15%;
+    }
+    &:nth-child(2) {
+      width: 75%;
+    }
+    &:nth-child(3) {
+      @extend .hidden-sm-down;
+    }
+    &:nth-child(4) {
+      @extend .hidden-sm-down;
+    }
+    &:nth-child(5) {
+      @extend .hidden-sm-down;
+    }
+    &:nth-child(6) {
+      @extend .hidden-sm-down;
+    }
+    @media (min-width: 768px) {
+      &:nth-child(1) {
+        width: 8%;
+      }
+      &:nth-child(2) {
+        width: 25%;
+      }
+      &:nth-child(3) {
+        width: 25%;
+      }
+      &:nth-child(4) {
+        width: 10%;
+      }
+      &:nth-child(5) {
+        width: 10%;
+      }
+      &:nth-child(6) {
+        width: 10%;
+      }
+    }
+  }
+}
+
+.athlete-details {
+  @extend .list-inline;
+  li {
+    @extend .list-inline-item;
+    @extend .align-top;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    &:nth-child(1) {
+      width: 30%;
+    }
+    &:nth-child(2) {
+      width: 50%;
+    }
+    &:nth-child(3) {
+      @extend .hidden-sm-down;
+    }
+    &:nth-child(4) {
+      @extend .hidden-sm-down;
+    }
+    &:nth-child(5) {
+      @extend .hidden-sm-down;
+    }
+    &:nth-child(6) {
+      @extend .hidden-sm-down;
+    }
+    @media (min-width: 768px) {
+      &:nth-child(1) {
+        width: 15%;
+      }
+      &:nth-child(2) {
+        width: 10%;
+      }
+      &:nth-child(3) {
+        width: 15%;
+      }
+      &:nth-child(4) {
+        width: 25%;
+      }
+      &:nth-child(5) {
+        width: 25%;
+      }
+    }
+  }
+}
